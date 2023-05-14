@@ -9,4 +9,14 @@ tilesList.forEach(tile => {
     tile.onclick = function(){
         tocaSom(idInstrument)
     }
+
+    tile.onkeydown = function(event){
+        if(event.code === 'Enter' || event.code === 'Space'){
+            tile.classList.add('ativa')
+        }
+    }
+
+    tile.onkeyup = function(){
+        tile.classList.remove('ativa')
+    }
 })
